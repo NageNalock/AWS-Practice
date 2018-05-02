@@ -5,7 +5,6 @@ from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
-file_url = ''
 
 
 @app.route('/', methods=['GET'])
@@ -14,7 +13,6 @@ def signin_form():
               <p><input type="file" name="the_file" >
               <p><button type="submit">Upload</button></p>
               </form>'''
-
 
 
 @app.route('/upload', methods=['GET', 'POST'])
@@ -73,6 +71,7 @@ def charge(judge):
     else:
         new_judge = input('输入出错,请重新输入(Y/N)')
         charge(new_judge)
+
 
 if __name__ == '__main__':
     judge = input('是否允许外部访问(Y/N)')
