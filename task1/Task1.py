@@ -35,5 +35,16 @@ def signin():
         return '<h3>Create Snapshot Failed</h3>'
 
 
+def charge(judge):
+    if judge == 'Y':
+        app.run(host='0.0.0.0')
+    elif judge == 'N':
+        app.run()
+    else:
+        new_judge = input('输入出错,请重新输入(Y/N)')
+        charge(new_judge)
+
 if __name__ == '__main__':
-    app.run()
+    judge = input('是否允许外部访问(Y/N)')
+    charge(judge)
+    # app.run()
