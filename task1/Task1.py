@@ -32,7 +32,7 @@ def signin():
         return '<h3>Create Snapshot Success</h3>' + snapshot_id
     except:
         print("快照创建错误")
-        return '<h3>Create Snapshot Failure</h3>'
+        return '<h3>Create Snapshot Failed</h3>'
 
 
 if __name__ == '__main__':
